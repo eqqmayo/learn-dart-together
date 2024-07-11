@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:learn_dart_together/19_result/core/result.dart';
 import 'package:learn_dart_together/20_design/data_source/member_data_source.dart';
 import 'package:learn_dart_together/20_design/model/member.dart';

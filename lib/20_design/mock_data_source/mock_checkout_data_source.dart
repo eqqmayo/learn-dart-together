@@ -13,6 +13,7 @@ class MockCheckoutDataSource implements CheckoutDataSource {
     _initializationDone = fetchCheckouts();
   }
 
+  @override
   Future<void> fetchCheckouts() async {
     try {
       _checkouts = await csvToCheckoutList(_csvFile);

@@ -1,12 +1,6 @@
 import 'dart:io';
-import 'package:learn_dart_together/20_design/mock_data_source/mock_book_data_source.dart';
-import 'package:learn_dart_together/20_design/mock_data_source/mock_checkout_data_source.dart';
-import 'package:learn_dart_together/20_design/mock_data_source/mock_member_data_source.dart';
 import 'package:learn_dart_together/20_design/repository/book_repository.dart';
 import 'package:learn_dart_together/20_design/repository/checkout_repository.dart';
-import 'package:learn_dart_together/20_design/repository_impl/book_repository_impl.dart';
-import 'package:learn_dart_together/20_design/repository_impl/checkout_repository_impl.dart';
-import 'package:learn_dart_together/20_design/repository_impl/member_repository_impl.dart';
 import 'package:learn_dart_together/20_design/service/book_management.dart';
 import 'package:learn_dart_together/20_design/service/checkout_management.dart';
 import 'package:learn_dart_together/20_design/service/member_management.dart';
@@ -115,18 +109,4 @@ class MyLibrary {
       throw Exception('$data 파일을 찾을 수 없습니다: $source');
     }
   }
-}
-
-Future<void> main() async {
-  final memberDataSource = MockMemberDataSource();
-  final bookDataSource = MockBookDataSource();
-  final checkoutDataSource = MockCheckoutDataSource();
-
-  final myLibrary = MyLibrary(
-    MemberRepositoryImpl(memberDataSource),
-    BookRepositoryImpl(bookDataSource),
-    CheckoutRepositoryImpl(
-        checkoutDataSource, memberDataSource, bookDataSource),
-  );
-  await myLibrary.displayMain();
 }

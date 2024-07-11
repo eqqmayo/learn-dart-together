@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:learn_dart_together/19_result/core/result.dart';
-import 'package:learn_dart_together/20_design/model/book.dart';
 import 'package:learn_dart_together/20_design/model/checkout.dart';
 import 'package:learn_dart_together/20_design/repository/checkout_repository.dart';
 import 'package:learn_dart_together/20_design/service/my_library.dart';
